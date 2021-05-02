@@ -5,12 +5,12 @@
 .header {
   &-logo {
     display: block;
-    width: rem(56px);
     height: rem(24px);
+    width: rem(56px);
 
     @include breakpoint-up(medium) {
-      width: rem(90px);
       height: rem(39px);
+      width: rem(90px);
     }
   }
 
@@ -24,15 +24,15 @@
     }
 
     &-soon {
-      font-weight: 700;
       color: $veryDarkBlue;
+      font-weight: 700;
     }
 
   }
 
   &-2 {
-    line-height: calc(15/12);
     color: $veryDarkBlue;
+    line-height: calc(15/12);
 
     @include breakpoint-up(medium) {
       font-size: rem(20px);
@@ -44,18 +44,19 @@
 .email {
   &-form {
     @include breakpoint-up(medium) {
+      -ms-flex-preferred-size: rem(421px);
       flex-basis: rem(421px);
     }
   }
 
   &-input {
-    box-shadow: 0px 0px rem(7px) rem(3px) rgba(0, 0, 0, 0.0001);
-    border-radius: rem(28px);
-    line-height: calc(20/12);
     border: rem(1px) solid $paleBlue;
+    border-radius: rem(28px);
+    box-shadow: 0px 0px rem(7px) rem(3px) rgba(0, 0, 0, 0.0001);
     color: $emailBlue;
-    font-weight: inherit;
     font-size: inherit;
+    font-weight: inherit;
+    line-height: calc(20/12);
     width: 100%;
 
     @include breakpoint-up(medium) {
@@ -73,40 +74,43 @@
   }
 
   &-error {
-    font-weight: 400;
-    font-style: italic;
-    font-size: rem(10px);
-    line-height: 2;
-    letter-spacing: rem(0.125px);
     color: $lightRed;
+    font-size: rem(10px);
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: rem(0.125px);
+    line-height: 2;
 
     @include breakpoint-up(medium) {
-      text-align: left;
       font-size: rem(12px);
-      line-height: calc(20/12);
       letter-spacing: rem(0.15px);
+      line-height: calc(20/12);
+      text-align: left;
     }
   }
 
   &-btn {
     background: $blue;
-    box-shadow: 0px rem(5px) rem(10px) rem(2px) rgba(76, 123, 243, 0.230414);
-    border-radius: rem(28px);
-    line-height: calc(16/12);
     border: none;
+    border-radius: rem(28px);
+    box-shadow: 0px rem(5px) rem(10px) rem(2px) rgba(76, 123, 243, 0.230414);
     color: white;
+    cursor: pointer;
     font-size: inherit;
     font-weight: 600;
-    cursor: pointer;
+    line-height: calc(16/12);
+    -webkit-transition: all 150ms ease-in-out;
     transition: all 150ms ease-in-out;
 
     @include breakpoint-up(medium) {
-      line-height: calc(19/16);
+      -ms-flex-preferred-size: rem(200px);
       flex-basis: rem(200px);
       height: rem(56px);
+      line-height: calc(19/16);
     }
 
     &:hover {
+      -webkit-filter: opacity(0.8);
       filter: opacity(0.8);
     }
   }
@@ -124,17 +128,18 @@
 
   &-icons {
     border: rem(0.918357px) solid rgba(76, 123, 243, 0.15);
-    cursor: pointer;
-    transition: all 150ms ease-in-out;
     border-radius: 50%;
+    cursor: pointer;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
 
     &:hover {
-      color: white;
       background-color: $blue;
-      transform: scale(1.2);
       box-shadow: -2px 5px 18px -3px rgba(0, 0, 0, 0.75);
+      color: white;
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2);
     }
-
   }
 }
 
