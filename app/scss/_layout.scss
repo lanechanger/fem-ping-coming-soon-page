@@ -1,7 +1,36 @@
 .l {
   &-site-container {
     margin: 0 7.337%;
-    padding: rem(82px) 0 rem(10px) 0;
+    padding: rem(81px) 0 rem(10px) 0;
+
+    @include breakpoint-up(medium) {
+      padding-bottom: rem(20px);
+    }
+  }
+
+  &-no-display {
+    display: none;
+  }
+
+  &-block-display {
+    display: block;
+  }
+
+  // included .email on the below 2 to override .email's "margin"
+  &-no-email-error.email {
+    margin-bottom: rem(72px);
+
+    @include breakpoint-up(medium) {
+      margin-bottom: rem(94px);
+    }
+  }
+
+  &-email-error.email {
+    margin-bottom: rem(40px);
+
+    @include breakpoint-up(medium) {
+      margin-bottom: rem(58px);
+    }
   }
 }
 
@@ -9,19 +38,34 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+
+  flex: 1 1 0;
 }
 
 .header {
+  &-section {
+    width: 100%;
+  }
+
   &-logo {
     margin: auto;
   }
 
   &-1 {
     margin-top: rem(32px);
+
+    @include breakpoint-up(medium) {
+      margin-top: rem(40px);
+    }
   }
 
   &-2 {
     margin-top: rem(15px);
+
+    @include breakpoint-up(medium) {
+      margin-top: rem(16px);
+    }
   }
 }
 
@@ -30,31 +74,51 @@
   flex-direction: column;
   margin: rem(32px) 6.25% 0 6.25%;
 
-  &-form {}
+  @include breakpoint-up(medium) {
+    margin: rem(40px) 0 0 0;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  &-form {
+    @include breakpoint-up(medium) {
+      margin-right: rem(16px);
+    }
+  }
 
   &-input {
     padding: rem(9px) 0 rem(9px) rem(32px);
+
+    @include breakpoint-up(medium) {
+      padding: rem(17px) 50% rem(17px) rem(30px);
+      width: 29.236%;
+    }
   }
 
   &-error {
     margin: rem(2px) 0 rem(10px) 0;
+
+    @include breakpoint-up(medium) {
+      margin: rem(6px) 0 rem(10px) rem(31px);
+    }
   }
 
   &-btn {
     margin-top: rem(10px);
     padding: rem(12px) 0;
-  }
-}
 
-.illustration {
-  margin-top: rem(72px);
+    @include breakpoint-up(medium) {
+      margin-top: 0;
+      padding: rem(18.5px) 0;
+    }
+  }
 }
 
 .social {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: rem(120px);
+  margin-top: rem(64px);
   font-size: rem(14px);
 
   &-icons {
@@ -76,4 +140,8 @@
 
 .copyright {
   margin-top: rem(27px);
+
+  @include breakpoint-up(medium) {
+    margin-top: rem(25px);
+  }
 }

@@ -19,11 +19,22 @@ body {
   font-family: 'Libre Franklin', sans-serif;
   color: $gray;
   font-weight: 300;
+
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint-up(medium) {
+    font-size: rem(16px);
+  }
 }
 
 .attribution {
   margin-top: rem(9px);
   font-size: rem(11px);
+
+  @include breakpoint-up(medium) {
+    margin-top: rem(15px);
+  }
 
   & a {
     color: $blue;

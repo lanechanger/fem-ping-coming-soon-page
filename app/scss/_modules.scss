@@ -7,12 +7,21 @@
     display: block;
     width: rem(56px);
     height: rem(24px);
+
+    @include breakpoint-up(medium) {
+      width: rem(90px);
+      height: rem(39px);
+    }
   }
 
   &-1 {
-    font-weight: 400;
     font-size: rem(22px);
     line-height: calc(32/22);
+
+    @include breakpoint-up(medium) {
+      font-size: rem(48px);
+      line-height: calc(60/48);
+    }
 
     &-soon {
       font-weight: 700;
@@ -24,11 +33,20 @@
   &-2 {
     line-height: calc(15/12);
     color: $veryDarkBlue;
+
+    @include breakpoint-up(medium) {
+      font-size: rem(20px);
+      line-height: calc(24/20);
+    }
   }
 }
 
 .email {
-  &-form {}
+  &-form {
+    @include breakpoint-up(medium) {
+      flex-basis: rem(421px);
+    }
+  }
 
   &-input {
     box-shadow: 0px 0px rem(7px) rem(3px) rgba(0, 0, 0, 0.0001);
@@ -39,17 +57,35 @@
     font-weight: inherit;
     font-size: inherit;
     width: 100%;
+
+    @include breakpoint-up(medium) {
+      font-size: rem(16px);
+      line-height: calc(20/16);
+    }
+
+    &__default-border {
+      border-color: $paleBlue;
+    }
+
+    &__error-border {
+      border-color: $lightRed;
+    }
   }
 
   &-error {
-    font-weight: normal;
+    font-weight: 400;
     font-style: italic;
     font-size: rem(10px);
     line-height: 2;
     letter-spacing: rem(0.125px);
     color: $lightRed;
 
-    display: none;
+    @include breakpoint-up(medium) {
+      text-align: left;
+      font-size: rem(12px);
+      line-height: calc(20/12);
+      letter-spacing: rem(0.15px);
+    }
   }
 
   &-btn {
@@ -64,11 +100,23 @@
     cursor: pointer;
     transition: all 150ms ease-in-out;
 
+    @include breakpoint-up(medium) {
+      line-height: calc(19/16);
+      flex-basis: rem(200px);
+      height: rem(56px);
+    }
+
     &:hover {
-      font-weight: 700;
       filter: opacity(0.8);
     }
   }
+}
+
+.illustration {
+  max-width: rem(640px);
+  width: 100%;
+
+  @include breakpoint-up(medium) {}
 }
 
 .social {
