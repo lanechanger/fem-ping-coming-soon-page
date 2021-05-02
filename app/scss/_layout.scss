@@ -1,0 +1,79 @@
+.l {
+  &-site-container {
+    margin: 0 7.337%;
+    padding: rem(82px) 0 rem(10px) 0;
+  }
+}
+
+.landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  &-logo {
+    margin: auto;
+  }
+
+  &-1 {
+    margin-top: rem(32px);
+  }
+
+  &-2 {
+    margin-top: rem(15px);
+  }
+}
+
+.email {
+  display: flex;
+  flex-direction: column;
+  margin: rem(32px) 6.25% 0 6.25%;
+
+  &-form {}
+
+  &-input {
+    padding: rem(9px) 0 rem(9px) rem(32px);
+  }
+
+  &-error {
+    margin: rem(2px) 0 rem(10px) 0;
+  }
+
+  &-btn {
+    margin-top: rem(10px);
+    padding: rem(12px) 0;
+  }
+}
+
+.illustration {
+  margin-top: rem(72px);
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: rem(120px);
+  font-size: rem(14px);
+
+  &-icons {
+    padding: rem(6px) rem(8px) rem(6px) rem(8px);
+
+    &-fb {
+      padding: rem(6px) rem(10.75px) rem(6px) rem(10.75px);
+    }
+
+    &-inst {
+      padding: rem(6px) rem(8.75px) rem(6px) rem(8.75px);
+    }
+
+    &:not(:last-child) {
+      margin-right: rem(11.71px);
+    }
+  }
+}
+
+.copyright {
+  margin-top: rem(27px);
+}

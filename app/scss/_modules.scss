@@ -1,0 +1,96 @@
+.landing {
+  height: auto;
+}
+
+.header {
+  &-logo {
+    display: block;
+    width: rem(56px);
+    height: rem(24px);
+  }
+
+  &-1 {
+    font-weight: 400;
+    font-size: rem(22px);
+    line-height: calc(32/22);
+
+    &-soon {
+      font-weight: 700;
+      color: $veryDarkBlue;
+    }
+
+  }
+
+  &-2 {
+    line-height: calc(15/12);
+    color: $veryDarkBlue;
+  }
+}
+
+.email {
+  &-form {}
+
+  &-input {
+    box-shadow: 0px 0px rem(7px) rem(3px) rgba(0, 0, 0, 0.0001);
+    border-radius: rem(28px);
+    line-height: calc(20/12);
+    border: rem(1px) solid $paleBlue;
+    color: $emailBlue;
+    font-weight: inherit;
+    font-size: inherit;
+    width: 100%;
+  }
+
+  &-error {
+    font-weight: normal;
+    font-style: italic;
+    font-size: rem(10px);
+    line-height: 2;
+    letter-spacing: rem(0.125px);
+    color: $lightRed;
+
+    display: none;
+  }
+
+  &-btn {
+    background: $blue;
+    box-shadow: 0px rem(5px) rem(10px) rem(2px) rgba(76, 123, 243, 0.230414);
+    border-radius: rem(28px);
+    line-height: calc(16/12);
+    border: none;
+    color: white;
+    font-size: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 150ms ease-in-out;
+
+    &:hover {
+      font-weight: 700;
+      filter: opacity(0.8);
+    }
+  }
+}
+
+.social {
+  color: $blue;
+
+  &-icons {
+    border: rem(0.918357px) solid rgba(76, 123, 243, 0.15);
+    cursor: pointer;
+    transition: all 150ms ease-in-out;
+    border-radius: 50%;
+
+    &:hover {
+      color: white;
+      background-color: $blue;
+      transform: scale(1.2);
+      box-shadow: -2px 5px 18px -3px rgba(0, 0, 0, 0.75);
+    }
+
+  }
+}
+
+.copyright {
+  font-size: rem(10px);
+  line-height: calc(12/10);
+}

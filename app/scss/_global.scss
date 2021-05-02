@@ -1,0 +1,31 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  height: 100%;
+  min-height: 100vh;
+  text-align: center;
+  font-size: rem(12px);
+  font-family: 'Libre Franklin', sans-serif;
+  color: $gray;
+  font-weight: 300;
+}
+
+.attribution {
+  margin-top: rem(9px);
+  font-size: rem(11px);
+
+  & a {
+    color: $blue;
+  }
+}

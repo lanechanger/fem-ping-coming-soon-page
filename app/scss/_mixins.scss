@@ -1,0 +1,22 @@
+$breakpoints-up: (medium: 640px, large: 1024px, xlarge: 1440px);
+$breakpoints-down: (small: 639px, medium: 1023px, large: 1439px);
+
+@mixin breakpoint-up($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
+
+@function stripUnit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@function rem($value) {
+  @return (stripUnit($value) / stripUnit($html-font-size)) * 1rem;
+}
