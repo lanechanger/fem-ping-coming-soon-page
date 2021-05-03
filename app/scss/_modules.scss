@@ -17,6 +17,7 @@
   &-1 {
     font-size: rem(22px);
     line-height: calc(32/22);
+    font-weight: 300;
 
     @include breakpoint-up(medium) {
       font-size: rem(48px);
